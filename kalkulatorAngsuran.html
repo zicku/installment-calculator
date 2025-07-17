@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kalkulator Angsuran IMS Finance</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Kalkulator Angsuran IMS Finance</h2>
+
+    <label>Harga Mobil (OTR):</label>
+    <input type="number" id="otr" placeholder="Contoh: 240000000" /><br />
+
+    <label>Down Payment (%):</label>
+    <input type="number" id="dp" placeholder="Contoh: 20" /><br />
+
+    <label>Jangka Waktu (tahun):</label>
+    <input
+      type="number"
+      step="0.1"
+      id="jangkaWaktu"
+      placeholder="Contoh: 1.5"
+    /><br />
+
+    <label>Tanggal Mulai Bayar:</label>
+    <input type="date" id="tanggalMulai" /><br />
+
+    <button onclick="hitungAngsuran()">Hitung Angsuran</button>
+    <button onclick="cekJatuhTempo()">Lihat Jadwal Angsuran</button>
+    <button onclick="cekDenda()">Hitung Denda Keterlambatan</button>
+
+    <div
+      class="hasil"
+      id="output"
+      style="display: none; margin-top: 20px"
+    ></div>
+
+    <!-- Tombol akan disisipkan sebelum tabel jadwal -->
+    <div id="tombolKeterlambatan" style="margin-top: 20px"></div>
+
+    <!-- Tabel jadwal -->
+    <div
+      class="hasil"
+      id="output2"
+      style="display: none; margin-top: 10px"
+    ></div>
+
+    <!-- Output denda -->
+    <div
+      class="hasil"
+      id="output3"
+      style="display: none; margin-top: 20px"
+    ></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
